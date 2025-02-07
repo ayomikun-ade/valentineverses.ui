@@ -11,7 +11,7 @@ const LoveLetter = () => {
             Love Letter Generator
           </h2>
           <div className="flex flex-col gap-2 mb-2 w-full">
-            <label className="" htmlFor="sender">
+            <label className="font-medium" htmlFor="sender">
               Senders Name:
             </label>
             <input
@@ -22,7 +22,7 @@ const LoveLetter = () => {
             />
           </div>
           <div className="flex flex-col gap-2 mb-2 w-full">
-            <label className="" htmlFor="Receiver">
+            <label className="font-medium" htmlFor="Receiver">
               Receivers Name:
             </label>
             <input
@@ -33,8 +33,8 @@ const LoveLetter = () => {
             />
           </div>
           <div className="flex flex-col gap-2 mb-2 w-full">
-            <label className="" htmlFor="addition">
-              Any Additional Information:
+            <label className="font-medium" htmlFor="addition">
+              Additional Information:
             </label>
             <input
               className="rounded-lg px-3 py-2 outline-none border focus:border-pink-300 focus:shadow-md focus:shadow-pink-400/60 transition duration-300 hover:ease-in-out"
