@@ -26,9 +26,12 @@ const Home = () => {
             >
               Love Letter Generator
             </Link>
-            <button className="bg-pink-300 text-black rounded-md px-3 py-2 transition duration-300 hover:ease-in-out hover:bg-pink-400">
+            <Link
+              to="/poem-generator"
+              className="bg-pink-300 text-black rounded-md px-3 py-2 transition duration-300 hover:ease-in-out hover:bg-pink-400"
+            >
               Poem Generator
-            </button>
+            </Link>
           </div>
         </div>
         <Copyright />
