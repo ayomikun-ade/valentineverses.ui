@@ -50,9 +50,9 @@ const LoveLetter = () => {
 
   const getLineStyle = (index, lines) => {
     if (index === 0) {
-      return "italic text-pink-600 font-medium mb-1 font-logo text-3xl"; // Opening salutation style
+      return "italic text-pink-600 font-medium mb-2 font-logo text-3xl"; // Opening salutation style
     } else if (index === lines.length - 1 || index === lines.length - 2) {
-      return "font-semibold mt-1 text-right"; // Closing salutation style
+      return "font-semibold text-right"; // Closing salutation style
     } else {
       return "text-base mb-2"; // Letter body style
     }
@@ -133,9 +133,10 @@ const LoveLetter = () => {
             className={`bg-pink-600 rounded-md text-white px-3 py-2 hover:bg-pink-700 transition duration-300 hover:ease-in-out ${
               loading ? `cursor-not-allowed opacity-50` : ``
             }`}
+            disabled={loading}
           >
             {loading ? (
-              <p>
+              <p className="flex">
                 <img
                   src="/loading.svg"
                   alt="loading"
@@ -150,10 +151,10 @@ const LoveLetter = () => {
         </form>
 
         {generatedLoveLetter.length > 0 && (
-          <div className="flex flex-col items-center my-16 w-[93%] max-w-[600px] md:w-full">
+          <div className="flex flex-col items-center animate-fade my-16 w-[93%] max-w-[600px] md:w-full">
             <div
               id="letter"
-              className="bg-pink-200 bg-opacity-95 animate-fade px-6 md:px-10 py-8 "
+              className="bg-pink-200 bg-opacity-95 px-6 md:px-10 py-8 "
             >
               {generatedLoveLetter.map((line, index) => (
                 <p
