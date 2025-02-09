@@ -1,12 +1,9 @@
 import { Link } from "react-router";
-import Copyright from "../components/Copyright";
-import Header from "../components/Header";
 
 const Home = () => {
   return (
     <>
-      <section className="relative font-soft bg-[url('/src/assets/letters.jpg')] bg-no-repeat bg-cover bg-center min-h-screen w-full flex flex-col justify-center items-center">
-        <Header />
+      <section className="relative font-soft bg-[url('/src/assets/letters.jpg')] bg-no-repeat bg-cover bg-center bg-fixed min-h-screen w-full flex flex-col justify-center items-center">
         <div className="backdrop-brightness-95 backdrop-blur flex flex-col mx-3 max-w-[600px] min-h-[500px] px-6 py-8 justify-evenly items-center bg-transparent shadow-md rounded-lg">
           <h2 className="font-hard font-bold text-center text-pink-500 text-3xl">
             Speak from the Heart
@@ -19,7 +16,7 @@ const Home = () => {
             Whether you&apos;re looking for a romantic gesture or a thoughtful
             gift, we&apos;ve got you covered!
           </p>
-          <div className="flex gap-3 text-center my-2">
+          <div className="flex flex-col md:flex-row gap-3 text-center my-2">
             <Link
               to="/love-letter"
               className="bg-pink-600 text-white rounded-md px-3 py-2 transition duration-300 hover:ease-in-out hover:bg-pink-500"
@@ -34,7 +31,6 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <Copyright />
       </section>
     </>
   );
