@@ -7,7 +7,17 @@ export default {
       hard: ['"Roboto Slab"'],
       logo: ["Cookie"],
     },
-    extend: {},
+    extend: {
+      animation: {
+        fade: "fade 1s ease-in-out forwards",
+      },
+      keyframes: {
+        fade: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
+    },
   },
   plugins: [],
 };
