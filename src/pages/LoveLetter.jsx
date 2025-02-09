@@ -134,7 +134,14 @@ const LoveLetter = () => {
             }`}
           >
             {loading ? (
-              <img src="/loading.svg" alt="loading" className="animate-spin" />
+              <p>
+                <img
+                  src="/loading.svg"
+                  alt="loading"
+                  className="animate-spin"
+                />{" "}
+                Loading..
+              </p>
             ) : (
               "Generate Letter"
             )}
@@ -156,7 +163,7 @@ const LoveLetter = () => {
                 </p>
               ))}
             </div>
-            <div className="flex flex-col md:flex-row gap-2 mt-4">
+            <div className="flex flex-col text-center md:flex-row gap-2 mt-4">
               <button
                 className="flex text-black bg-white border-2 border-white hover:bg-transparent hover:text-white px-3 py-2 rounded-md transition duration-300 hover:ease-in-out"
                 onClick={handleDownloadImage}
