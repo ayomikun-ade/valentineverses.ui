@@ -36,6 +36,7 @@ const LoveLetter = () => {
   };
 
   const handleDownloadImage = async () => {
+    toast.info("Download in progress...", { autoClose: 3000, theme: "dark" });
     const element = document.getElementById("letter");
     const canvas = await html2canvas(element);
     const data = canvas.toDataURL("image/jpg");
@@ -82,7 +83,7 @@ const LoveLetter = () => {
           onSubmit={handleSubmit}
           className="bg-pink-200 bg-opacity-50 backdrop-blur overflow-auto mt-24 flex flex-col w-[93%] max-w-[600px] md:w-full h-[500px] px-6 md:px-10 py-8 justify-evenly items-center shadow-lg rounded-lg"
         >
-          <h2 className="font-hard text-pink-700 text-3xl text-center font-bold">
+          <h2 className="font-hard text-pink-600 text-3xl text-center font-bold">
             Love Letter Generator
           </h2>
           <div className="flex flex-col gap-2 mb-2 w-full">
@@ -163,9 +164,9 @@ const LoveLetter = () => {
                 </p>
               ))}
             </div>
-            <div className="flex flex-col text-center md:flex-row gap-2 mt-4">
+            <div className="flex flex-col text-center font-medium md:flex-row gap-2 mt-4">
               <button
-                className="flex text-black bg-white border-2 border-white hover:bg-transparent hover:text-white px-3 py-2 rounded-md transition duration-300 hover:ease-in-out"
+                className="text-black bg-white border-2 border-white hover:bg-transparent hover:text-white px-3 py-2 rounded-md transition duration-300 hover:ease-in-out"
                 onClick={handleDownloadImage}
               >
                 {/* <img src="/download.svg" alt="download" /> */}
