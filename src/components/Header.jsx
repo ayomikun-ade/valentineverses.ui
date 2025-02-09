@@ -31,7 +31,7 @@ const Header = () => {
 
       {/* background music */}
       <audio id="background-music" loop>
-        <source src="/src/assets/val-audio.mp3" type="audio/mp3" />
+        <source src="/val-audio.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
     </header>
