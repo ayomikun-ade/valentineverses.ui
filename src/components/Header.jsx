@@ -27,12 +27,8 @@ const Header = () => {
         className="font-soft text-sm text-end absolute right-2 md:right-10"
       >
         <img
-          src={
-            musicPlay
-              ? "/src/assets/volume_up.svg"
-              : "/src/assets/volume_off.svg"
-          }
-          alt="sound"
+          src={musicPlay ? "/volume_up.svg" : "/volume_off.svg"}
+          alt={musicPlay ? "sound-on" : "sound-off"}
         />
       </button>
 
