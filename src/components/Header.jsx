@@ -18,7 +18,7 @@ const Header = () => {
   }, [musicPlay]);
 
   return (
-    <header className="fixed font-logo font-semibold backdrop-blur z-20 text-5xl flex justify-center md:justify-between items-center text-center md:text-left text-white top-0 left-0 right-0 bg px-5 md:px-10 py-4">
+    <header className="fixed font-logo font-semibold backdrop-blur-sm z-20 text-5xl flex justify-center md:justify-between items-center text-center md:text-left text-white top-0 left-0 right-0 bg px-5 md:px-10 py-4">
       <Link to="/" className="outline-none">
         ValentineVerses
       </Link>
@@ -26,7 +26,14 @@ const Header = () => {
         onClick={handleMusicToggle}
         className="font-soft text-sm text-end absolute right-2 md:right-10"
       >
-        Music
+        <img
+          src={
+            musicPlay
+              ? "/src/assets/volume_up.svg"
+              : "/src/assets/volume_off.svg"
+          }
+          alt="sound"
+        />
       </button>
 
       {/* background music */}
