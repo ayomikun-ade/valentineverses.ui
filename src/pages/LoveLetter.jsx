@@ -27,6 +27,10 @@ const LoveLetter = () => {
         req
       );
       setGeneratedLoveLetter(response.data.love_letter);
+      toast.success("Letter generation done, scroll down.", {
+        autoClose: 2500,
+        theme: "dark",
+      });
     } catch (err) {
       setError(err.message);
       toast.error(error, { autoClose: 3000, theme: "dark" });
@@ -142,7 +146,7 @@ const LoveLetter = () => {
                   alt="loading"
                   className="animate-spin"
                 />{" "}
-                Loading..
+                Generating...
               </p>
             ) : (
               "Generate Letter"
