@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Copyright from "../components/Copyright";
-import Header from "../components/Header";
 
 const PoemGen = () => {
   const [requests, setRequests] = useState("");
@@ -13,7 +11,6 @@ const PoemGen = () => {
   return (
     <>
       <section className="relative font-soft bg-[url('/src/assets/letters.jpg')] bg-no-repeat bg-left-bottom bg-cover md:bg-center min-h-screen w-full flex flex-col justify-center items-center">
-        <Header />
         <form
           onSubmit={handleSubmit}
           className="bg-pink-200 bg-opacity-50 backdrop-blur flex flex-col w-[93%] max-w-[600px] md:w-full min-h-[500px] px-6 md:px-10 py-8 justify-evenly items-center shadow-lg rounded-lg"
@@ -45,7 +42,6 @@ const PoemGen = () => {
             Generate Poem
           </button>
         </form>
-        <Copyright />
       </section>
     </>
   );
