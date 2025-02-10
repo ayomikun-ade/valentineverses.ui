@@ -6,8 +6,12 @@ This repository contains the frontend code for ValentineVerses - a Love Letter/P
 
 The frontend provides a user interface for generating personalized love letters and poems using the Llama 3 model via a FastAPI backend. Users can input the sender's name, receiver's name, and optional additional information to generate a unique love letter, or provide requests for a generated poem.  The generated content can be downloaded as an image or copied to the clipboard.
 
-## Preview
+## Previews
 ![valentineverses home page](https://github.com/user-attachments/assets/f1e17989-b2e6-48c6-9621-86682457a8dd)
+![sample generated love letter](https://github.com/user-attachments/assets/be1df24e-c096-4b3d-896c-c05e1649e123)
+![sample generated poem](https://github.com/user-attachments/assets/bd9b65a6-c0ba-495d-bcef-80670527d9a7)
+
+
 
 
 ## Features
