@@ -42,7 +42,22 @@ const LoveLetter = () => {
   const handleDownloadImage = async () => {
     toast.info("Download in progress...", { autoClose: 3000, theme: "dark" });
     const element = document.getElementById("letter");
-    const canvas = await html2canvas(element);
+
+    const desiredWidth = 800; 
+    const desiredHeight = 600; 
+
+    const clone = element.cloneNode(true);
+    clone.id = 'clone-' + Date.now(); 
+    clone.style.position = 'fixed';
+    clone.style.left = '-9999px';
+    clone.style.width = `${desiredWidth}px`;
+    clone.style.height = `${desiredHeight}px`;
+    clone.style.boxSizing = 'border-box';
+    clone.style.maxWidth = 'none'; 
+
+    document.body.appendChild(clone);
+
+    const canvas = await html2canvas(clone, { scale: 2 });
     const data = canvas.toDataURL("image/jpg");
     const link = document.createElement("a");
     link.href = data;
@@ -134,9 +149,8 @@ const LoveLetter = () => {
           </div>
           <button
             type="submit"
-            className={`bg-pink-600 rounded-md text-white px-3 py-2 hover:bg-pink-700 transition duration-300 hover:ease-in-out ${
-              loading ? `cursor-not-allowed opacity-50` : ``
-            }`}
+            className={`bg-pink-600 rounded-md text-white px-3 py-2 hover:bg-pink-700 transition duration-300 hover:ease-in-out ${loading ? `cursor-not-allowed opacity-50` : ``
+              }`}
             disabled={loading}
           >
             {loading ? (
