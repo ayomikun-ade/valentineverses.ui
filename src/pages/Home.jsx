@@ -1,10 +1,16 @@
 import { Link } from "react-router";
+import { motion } from "motion/react";
 
 const Home = () => {
   return (
     <>
       <section className="relative font-soft bg-[url('/src/assets/letters.jpg')] bg-no-repeat bg-cover bg-center bg-fixed min-h-screen w-full flex flex-col justify-center items-center">
-        <div className="backdrop-brightness-95 backdrop-blur flex flex-col mx-3 max-w-[600px] min-h-[500px] px-6 py-8 justify-evenly items-center bg-transparent shadow-md rounded-lg">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="backdrop-brightness-95 backdrop-blur flex flex-col mx-3 max-w-[600px] min-h-[500px] px-6 py-8 justify-evenly items-center bg-transparent shadow-md rounded-lg"
+        >
           <h2 className="font-hard font-bold text-center text-pink-500 text-3xl">
             Speak from the Heart
           </h2>
@@ -30,7 +36,7 @@ const Home = () => {
               Poem Generator
             </Link>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

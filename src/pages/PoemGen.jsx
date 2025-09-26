@@ -3,6 +3,7 @@ import html2canvas from "html2canvas";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "motion/react";
 
 const PoemGen = () => {
   const [requests, setRequests] = useState("");
@@ -68,7 +69,10 @@ const PoemGen = () => {
     <>
       <ToastContainer />
       <section className="relative font-soft bg-[url('/src/assets/letters.jpg')] bg-no-repeat bg-left-bottom bg-cover bg-fixed md:bg-center min-h-screen w-full flex flex-col justify-center items-center">
-        <form
+        <motion.form
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           onSubmit={handleSubmit}
           className="bg-pink-200 bg-opacity-50 backdrop-blur overflow-auto mt-24 flex flex-col w-[93%] max-w-[600px] md:w-full min-h-[500px] px-6 md:px-10 py-8 justify-evenly items-center shadow-lg rounded-lg"
         >
@@ -112,7 +116,7 @@ const PoemGen = () => {
               "Generate Poem"
             )}
           </button>
-        </form>
+        </motion.form>
         {generatedPoem.length > 0 && (
           <div className="flex flex-col items-center animate-fade my-16 w-[93%] max-w-[600px] md:w-full">
             <div
