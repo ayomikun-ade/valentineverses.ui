@@ -27,7 +27,7 @@ const LoveLetter = () => {
         "https://valentineverses-be.vercel.app/generate-love-letter",
         req
       );
-      setGeneratedLoveLetter(response.data.love_letter);
+      setGeneratedLoveLetter(response.data.love_letter.split("\n"));
       toast.success("Letter generation done, scroll down.", {
         autoClose: 2500,
         theme: "dark",
